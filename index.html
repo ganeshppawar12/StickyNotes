@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stckey Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .stickyNotes{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 10px;
+    }
+    .card{
+        padding: 10px;
+        width: 49%;
+        height: 10rem;
+        border: 0.8px solid #e7e7e7;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 3.4px 3.4px 4.2px;
+    
+    }
+    .headers{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cross{
+        cursor: pointer;
+    }
+    .cross:hover{
+        color: red;
+        transition: 0.8s ease-in-out;
+    }
+</style>
+<body>
+    <nav style="background-color: rgb(255, 133, 200);padding: 5px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
+        <div>
+            <h1 style="margin: 0; text-align: center; color:#383838 ; text-shadow:3px 2px #c75757; font-weight: 700;">
+                Note
+            </h1>
+        </div>
+    </nav>
+    <main style="margin-top: 10px;">
+        <div style="display: flex ; align-items: end; justify-content: center; gap: 10px;">
+            <textarea name="note" id="note" cols="50" rows="8" placeholder="Make The Note!" style="border-radius: 10px; padding: 5px; border: 1px solid #e0e0e0;"></textarea>
+            <input type="color" id="color" name="color" title="Pick a Color" style="width: 20px; border-radius: 50%; border: none;  ">
+        </div>
+        <div style="display: flex ; align-items: end; justify-content: center;margin-top: 10px; ">
+            <button id="makeNoteBtn" style="border: none; padding: 5px 12px; border-radius: 5px; background-color:rgb(255, 133, 200); color: #383838; font-weight: 500; cursor: pointer;" >Make a Note</button>
+        </div>
+ <hr style="margin-top: 10px; margin-left: auto; margin-right: auto; width: 90%; background-color: #00ff00;;">
+ <div style="display: flex; align-items: center; justify-content: flex-end; padding:0 40px;">
+     <h1 style="text-align: center; color: #539ee5; text-decoration: underline; flex: 1;">My Tasks</h1>
+     <button id="ClearAll" style="background-color: #ff6161; color: #e0e0e0; border: none; outline: none; padding: 5px 10px; border-radius: 10px; font-size: 14px; ">Clear All</button>
+ </div>
+ 
+ <div class="stickyNotes" id="stickyNotes">
+            
+                <div id="card1" class="card" style="background-color: rgb(0, 0, 0);"><p style="color: rgb(255, 255, 255);">dgxg</p></div>
+            <div id="card1" class="card" style="background-color: rgb(196, 100, 59);"><p style="color: rgb(0, 0, 0);">sdbdb</p></div>
+            <div id="card2" class="card" style="background-color: rgb(196, 59, 171);"><p style="color: rgb(0, 0, 0);">sdbdbgg;k l twet</p></div>
+        </div>
+
+        
+    </main>
+
+    <script src="script.js">
+  
+
+    </script>
+</body>
+</html>
