@@ -14,6 +14,18 @@
         box-sizing: border-box;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    .myTaskContainer{
+        display: flex
+         ; align-items: end;
+          justify-content: center; 
+          gap: 10px;
+    }
+    .logo{
+            display: flex;
+             align-items: center;
+              justify-content: flex-end;
+               padding:0 40px;
+        }
     .stickyNotes{
         display: flex;
         align-items: center;
@@ -45,6 +57,33 @@
     h5{
         color:#383838
     }
+    .para{
+        word-wrap: break-word; /* Break long words and wrap to the next line */
+    overflow-wrap: break-word; /* Ensures that long words are wrapped */
+    white-space: normal;
+    }
+
+    @media screen  and (max-width:600px){
+        .myTaskContainer{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .myTaskContainer textarea{
+            width: 90%;
+        }
+        .logo{
+            justify-content: space-between;
+        }
+        h1{
+            font-size: 20px !important;
+            flex: 0 !important;
+            white-space: nowrap;
+        }
+        .card{
+            width: 100%;
+        }
+    }
 </style>
 <body>
     <nav style="background-color: rgb(255, 133, 200);padding: 5px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
@@ -55,7 +94,7 @@
         </div>
     </nav>
     <main style="margin-top: 10px;">
-        <div style="display: flex ; align-items: end; justify-content: center; gap: 10px;">
+        <div class="myTaskContainer">
             <textarea name="note" id="note" cols="50" rows="8" placeholder="Make The Note!" style="border-radius: 10px; padding: 5px; border: 1px solid #e0e0e0;"></textarea>
             <input type="color" id="color" name="color" title="Pick a Color" style="width: 20px; border-radius: 50%; border: none;  ">
         </div>
@@ -63,7 +102,7 @@
             <button id="makeNoteBtn" style="border: none; padding: 5px 12px; border-radius: 5px; background-color:rgb(255, 133, 200); color: #383838; font-weight: 500; cursor: pointer;" >Make a Note</button>
         </div>
  <hr style="margin-top: 10px; margin-left: auto; margin-right: auto; width: 90%; background-color: #00ff00;;">
- <div style="display: flex; align-items: center; justify-content: flex-end; padding:0 40px;">
+ <div class="logo" >
      <h1 style="text-align: center; color: #539ee5; text-decoration: underline; flex: 1;">My Tasks</h1>
      <button id="ClearAll" style="background-color: #ff1d1d; color: #ffffff; border: none; outline: none; padding: 5px 10px; border-radius: 5px; font-size: 14px; font-weight: 500; cursor: pointer;">Clear All</button>
  </div>

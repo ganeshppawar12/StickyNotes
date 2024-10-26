@@ -36,7 +36,8 @@ let color = document.getElementById("color").value;
   let div = document.createElement("div");
 
   let p = document.createElement("p");
-  console.log(color);
+  p.setAttribute('class', 'para')
+  
  
   p.innerText = note.value;
   div.append(p);
